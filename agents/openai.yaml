@@ -1,4 +1,4 @@
 interface:
   display_name: "Novel AI Detox"
-  short_description: "Iterative fiction rewriting and critique to remove AI feel, with short paragraphs, warmer dialogue, and stronger protagonist swagger"
-  default_prompt: "Use $novel-ai-detox to critique and rewrite fiction chapters until no concrete AI-feel issue remains; preserve plot facts, only revise challenged paragraphs, keep natural paragraphs short, treat polished competence lines and overly clipped dialogue as major issues, and let the protagonist sound lazier, cockier, and more dominant when appropriate."
+  short_description: "Controller-led fiction critique and rewrite workflow with reader and worker sub-agents"
+  default_prompt: "Use $novel-ai-detox as a controller-led workflow: keep the first agent on planning, delegation, merge, and final inspection; let reader and worker sub-agents handle critique and paragraph rewrites; preserve plot facts; keep natural paragraphs short; and let the protagonist sound lazier, cockier, and more dominant when appropriate."

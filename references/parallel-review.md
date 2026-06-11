@@ -1,5 +1,13 @@
 # Parallel Reader & Revision Protocol
 
+## Role split
+
+- The first agent is the controller.
+- The controller assigns work, merges outputs, and runs the final inspection.
+- The controller does not directly rewrite body paragraphs when sub-agents are available.
+- Reader agents only critique.
+- Worker agents only rewrite their owned paragraphs.
+
 ## Paragraph setup
 
 - Number paragraphs before critique.
@@ -8,6 +16,7 @@
 
 ## Reader pass
 
+- The controller prepares the paragraph IDs and the brief before spawning readers.
 - Spawn multiple reader agents when the chapter is long enough to benefit from independent critique.
 - Use at least 2 reader agents; use 3 to 4 for long or multi-scene chapters.
 - Assign each reader one lens:
@@ -25,6 +34,7 @@
 
 ## Revision pass
 
+- The controller groups flagged paragraphs into disjoint ownership sets before spawning workers.
 - Group flagged paragraphs into disjoint ownership sets.
 - Spawn one worker agent per disjoint set.
 - Give each worker only its owned paragraphs plus the relevant critique.
@@ -33,9 +43,11 @@
 
 ## Merge and recheck
 
+- The controller merges worker outputs back into the full chapter.
 - Merge all worker outputs into the chapter.
 - Run a fresh reader pass on the merged text.
 - Repeat until no reader can point to a concrete AI-feel issue.
+- The controller performs the last full-chapter inspection before final output.
 
 ## Common AI-feel checks
 

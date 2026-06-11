@@ -7,18 +7,22 @@ description: Iteratively rewrite and critique fiction chapters, scenes, or web-n
 
 ## Workflow
 
-1. Label paragraphs with stable IDs before critique.
-2. Build a brief with plot facts, tone target, and forbidden changes.
-3. If the chapter is long enough or has multiple scenes, spawn reader agents in parallel.
-4. Give each reader a distinct lens and collect only concrete critique.
-5. Revise only the paragraphs named by the current critique.
-6. If the flagged paragraphs do not overlap, spawn worker agents in parallel with disjoint ownership.
-7. Merge the revisions, then run another reader pass.
-8. Repeat until readers can no longer point to a concrete AI-feel issue.
-9. Output the final text and a short change log listing only changed paragraphs.
+1. Act as the controller agent, not the primary rewriter.
+2. Label paragraphs with stable IDs before critique.
+3. Build a brief with plot facts, tone target, and forbidden changes.
+4. If sub-agents are available and the chapter is splittable, spawn reader agents in parallel.
+5. Give each reader a distinct lens and collect only concrete critique.
+6. Spawn worker agents for the flagged paragraphs with disjoint ownership.
+7. Merge the worker outputs without expanding beyond the flagged paragraphs.
+8. Run another reader pass on the merged text.
+9. Repeat until readers can no longer point to a concrete AI-feel issue.
+10. Output the final text and a short change log listing only changed paragraphs.
 
 ## Non-negotiables
 
+- The first agent using this skill is the controller.
+- The controller handles briefing, paragraph numbering, delegation, merge, and final inspection.
+- The controller does not directly rewrite body paragraphs when sub-agents are available.
 - Preserve plot facts, character actions, and event order.
 - Never modify unflagged paragraphs.
 - Never rewrite the whole chapter when only a few paragraphs are flagged.
@@ -39,14 +43,19 @@ description: Iteratively rewrite and critique fiction chapters, scenes, or web-n
 ## Parallel agent use
 
 - Use [references/parallel-review.md](references/parallel-review.md) for reader roles, revision roles, and merge rules.
+- When sub-agents are available, the controller-reader-worker split is mandatory.
 - Spawn 2 reader agents minimum when parallel critique is worthwhile; use 3-4 for long chapters.
 - Keep reader lenses separate: voice/dialogue, rhythm/scene flow, AI tells/exposition, continuity/logic.
 - Spawn worker agents only when paragraph ownership does not overlap.
 - Do not let one worker revise another worker's paragraphs.
-- If the text is short or tightly coupled, keep work local and use one reader and one worker instead.
+- If the text is short or tightly coupled, the controller may use fewer sub-agents, but it still stays in management and final-check roles.
+- If sub-agents are unavailable, say so and fall back to single-agent execution as an explicit exception.
 
 ## Revision discipline
 
+- Reader agents only critique.
+- Worker agents only rewrite their owned paragraphs.
+- The controller only merges, checks, and decides the next pass.
 - Ask for paragraph-level findings, not whole-chapter opinions.
 - Reject vague feedback like "still feels AI" unless it points to exact paragraphs and features.
 - Flag competence-on-display lines that feel sturdy, sharp, and calculated but still sound like a prompt response.
