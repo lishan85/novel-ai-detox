@@ -26,6 +26,10 @@ description: Iteratively rewrite and critique fiction chapters, scenes, or web-n
 - Do not assume short sentences fix the problem.
 - Watch for polished functional lines that sound like a prompt being fulfilled, not a character speaking.
 - Do not over-compress dialogue; when natural, let speech carry warmth, hesitation, small courtesies, or emotional texture.
+- Keep each natural paragraph tight; aim for roughly 40 Chinese characters or fewer when possible.
+- Do not make every paragraph equally short if the scene needs a breath, but avoid long blocks of exposition.
+- Do not make dialogue too short; let people talk with a little more room, especially when the scene is social or confrontational.
+- Let the protagonist sound lazy, swaggering, and a little overconfident when the scene calls for it.
 - Prefer direct scene detail over explanation, summary, or moralizing.
 - Vary sentence length; avoid template symmetry and over-balanced phrasing.
 - Let dialogue carry conflict and character voice.
@@ -48,6 +52,8 @@ description: Iteratively rewrite and critique fiction chapters, scenes, or web-n
 - Flag competence-on-display lines that feel sturdy, sharp, and calculated but still sound like a prompt response.
 - Flag dialogue that is too clipped, too efficient, or too clean; prefer speech with a little human warmth and room to breathe.
 - Flag endings that summarize the moment instead of landing in the scene; convert them into a visible hook beat.
+- Flag paragraphs that run too long; split them into shorter beats when needed.
+- Flag the protagonist if the voice sounds too disciplined, too polite, or too careful.
 - Change only what the critique names.
 - If a sentence is fine, leave it alone.
 - Recheck after every edit pass.

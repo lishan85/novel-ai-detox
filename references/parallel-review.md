@@ -46,7 +46,9 @@
 - summary or moralizing lines
 - characters sounding too similar
 - too much exposition, too little scene action
+- natural paragraphs that are too long or too heavy
 - dialogue that is too brief, too neat, or too efficient for the moment
+- protagonist dialogue that lacks swagger, laziness, or arrogant ease
 - endings that explain the hook instead of landing on a live beat
 - repeated "he knew / he understood / it is not X but Y" patterns
 
@@ -57,6 +59,8 @@
 - Keep the factual meaning, but move the delivery from summary language into visible behavior or natural dialogue.
 - If a line sounds like the character is proving they are smart, sharp, steady, or calculating, make it feel like a person in the room instead.
 - If dialogue feels too concise, expand it with a natural address, a small reaction, a soft hedge, or a bit of human warmth.
+- If a paragraph runs too long, break it into shorter scene beats, usually around 40 Chinese characters or fewer per natural paragraph when possible.
+- If the protagonist sounds too tidy, add loose confidence, dismissive ease, or a slightly cocky edge without changing plot facts.
 
 ## Ending hook rewrite moves
 
