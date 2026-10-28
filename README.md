@@ -93,3 +93,7 @@ Use $novel-ai-detox to revise this chapter.
 ---
 
 英文简要说明见历史 commit；当前 README 以中文为主，技术细节以 [`SKILL.md`](SKILL.md) 英文原文为准。
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
